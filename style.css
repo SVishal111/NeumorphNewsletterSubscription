@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+:root {
+    --background: #19bedc;
+    --headtext: #02597b;
+    --bgbutton: #233d4c;
+    --textbutton: #fff;
+    --border-radius: 4px;
+    --body-bg: #fff;
+    --icon-color: #fff;
+    --icon-color-hover: #444;
+}
+
+#theme-toggler {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 1000;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-align: center;
+    color: var(--icon-color);
+    background: var(--background);
+}
+
+#theme-toggler:hover {
+    color: var(--icon-color-hover);
+    transition: 0.3s ease;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+/* body {
+    background: var(--bodybg);
+} */
+
+body.active {
+    --background: #2c2c2c;
+    --headtext: #fff;
+    --bgbutton: #555555;
+    --textbutton: #fff;
+    --border-radius: 4px;
+    --body-bg: #444;
+    --icon-color: #808080;
+    --icon-color-hover: #fff;
+}
+
+section {
+    height: 100vh;
+    /* width: 100%; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-bg);
+}
+
+.newsContainer {
+    width: 1000px;
+    aspect-ratio: 16/4;
+    margin: 30px;
+    padding: 10px;
+    background: var(--background);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.newsContainer .heading h1 {
+    color: var(--headtext);
+    font-size: 33px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 10px 0px;
+}
+
+.newsSub input {
+    height: 40px;
+    width: 500px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+.newsSub button {
+    height: 40px;
+    width: 120px;
+    background: var(--bgbutton);
+    color: var(--textbutton);
+    border-radius: var(--border-radius);
+}
+
+@media(max-width: 710px) {
+    .newsContainer .heading h1 {
+        font-size: 25px;
+    }
+
+    .newsSub input {
+        width: 300px;
+    }
+}
+
+@media(max-width: 510px) {
+    .newsContainer .heading h1 {
+        font-size: 16px;
+    }
+
+    .newsSub input {
+        width: 180px;
+    }
+
+    .newsContainer {
+        margin: 5px;
+    }
+}
